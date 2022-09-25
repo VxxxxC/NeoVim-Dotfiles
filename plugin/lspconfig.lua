@@ -5,6 +5,8 @@ if (not status) then return end
 
 local protocol = require('vim.lsp.protocol')
 
+vim.keymap.set('n', '<space>e', vim.diagnostic.open_float, { noremap = true, silent = true })
+
 -- Use an on_attach function to only map the following keys
 -- after the language server attaches to the current buffer
 local on_attach = function(client, bufnr)
