@@ -46,7 +46,11 @@ packer.startup(function(use)
 
     use 'lewis6991/gitsigns.nvim'
     use 'dinhhuy258/git.nvim' -- For git blame & browse
+
+
     use 'folke/lsp-colors.nvim'
+
+    -- below is another lsp diagnostics window at the botttom
     use {
         "folke/trouble.nvim",
         requires = "kyazdani42/nvim-web-devicons",

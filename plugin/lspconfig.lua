@@ -5,6 +5,7 @@ if (not status) then return end
 
 local protocol = require('vim.lsp.protocol')
 
+-- set keymap for lsp diagnostic messages float window
 vim.keymap.set('n', '<space>e', vim.diagnostic.open_float, { noremap = true, silent = true })
 
 -- Use an on_attach function to only map the following keys

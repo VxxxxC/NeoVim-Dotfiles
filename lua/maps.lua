@@ -16,7 +16,7 @@ keymap.set('n', '<C-a>', 'gg<S-v>G')
 --vim.api.nvim_create_user_command('W', 'w !sudo tee > /dev/null %', {})
 
 -- New tab
-keymap.set('n', '<Tab><Space>', ':tabedit')
+keymap.set('n', '<Tab><Space>', ':tabedit<Return>')
 -- Split window
 keymap.set('n', 'ss', ':split<Return><C-w>w')
 keymap.set('n', 'sv', ':vsplit<Return><C-w>w')
@@ -34,4 +34,4 @@ keymap.set('n', '<C-w><up>', '<C-w>+')
 keymap.set('n', '<C-w><down>', '<C-w>-')
 
 -- Cancel highlight after searching text , same keymap with ESC
-keymap.set('n', '<esc>', ':noh<return>')
+keymap.set('n', '<esc>', ':noh<Return>')
