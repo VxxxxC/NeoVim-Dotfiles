@@ -6,9 +6,5 @@ if (not status2) then return end
 mason.setup {}
 
 lspconfig.setup {
-    ensure_installed = { "sumneko_lua", "quick-lint-js", "tsserver", "tailwindcss", "eslint-lsp" },
+    ensure_installed = { "sumneko_lua" },
 }
-
-require 'lspconfig'.tailwindcss.setup {}
-require 'lspconfig'.eslint.setup {}
-require 'lspconfig'.quick_lint_js.setup {}
