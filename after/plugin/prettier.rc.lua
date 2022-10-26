@@ -11,6 +11,11 @@ prettier.setup {
     'typescriptreact',
     'json',
     'scss',
+<<<<<<< HEAD
     'less'
+=======
+    'less',
+    'dart'
+>>>>>>> bb6b362... feat(add-Flutter-LSP): added flutter lsp
   }
 }
