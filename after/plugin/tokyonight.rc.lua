@@ -24,10 +24,4 @@ vim.g.tokyonight_colors = {
   purple = "#6c71c4",
 }
 
-
-
-<<<<<<< HEAD
-vim.cmd[[colorscheme tokyonight]]
-=======
 -- vim.cmd[[colorscheme tokyonight]]
->>>>>>> bb6b362... feat(add-Flutter-LSP): added flutter lsp

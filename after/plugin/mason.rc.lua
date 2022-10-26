@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> bb6b362... feat(add-Flutter-LSP): added flutter lsp
 local status, mason = pcall(require, 'mason')
 if (not status) then return end
 

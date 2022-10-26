@@ -41,10 +41,7 @@ telescope.setup {
 }
 
 telescope.load_extension("file_browser")
-<<<<<<< HEAD
-=======
 require("telescope").load_extension "flutter" -- Flutter
->>>>>>> bb6b362... feat(add-Flutter-LSP): added flutter lsp
 
 vim.keymap.set('n', ';f',
   function()

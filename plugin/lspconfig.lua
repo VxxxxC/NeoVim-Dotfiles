@@ -66,13 +66,7 @@ protocol.CompletionItemKind = {
 }
 
 -- Set up completion using nvim_cmp with LSP source
-<<<<<<< HEAD
-local capabilities = require('cmp_nvim_lsp').update_capabilities(
-    vim.lsp.protocol.make_client_capabilities()
-)
-=======
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
->>>>>>> bb6b362... feat(add-Flutter-LSP): added flutter lsp
 
 nvim_lsp.flow.setup {
     on_attach = on_attach,
@@ -135,8 +129,5 @@ vim.diagnostic.config({
         source = "always", -- Or "if_many"
     },
 })
-<<<<<<< HEAD
-=======
 
 
->>>>>>> bb6b362... feat(add-Flutter-LSP): added flutter lsp

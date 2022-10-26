@@ -7,8 +7,4 @@ n.setup({
   }
 })
 
-<<<<<<< HEAD
-vim.cmd("colorscheme duskfox")
-=======
 -- vim.cmd("colorscheme duskfox")
->>>>>>> bb6b362... feat(add-Flutter-LSP): added flutter lsp
