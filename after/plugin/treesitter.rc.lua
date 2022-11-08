@@ -13,16 +13,18 @@ ts.setup {
   ensure_installed = {
     "tsx",
     "toml",
-    "php",
     "json",
     "yaml",
     "css",
+    "scss",
     "html",
     "lua",
     "fish",
     "svelte",
     "python",
-    "sql"
+    "sql",
+    "dart",
+    "astro"
   },
   autotag = {
     enable = true,
@@ -31,3 +33,6 @@ ts.setup {
 
 local parser_config = require "nvim-treesitter.parsers".get_parser_configs()
 parser_config.tsx.filetype_to_parsername = { "javascript", "typescript.tsx" }
+
+local ft_to_parser = require "nvim-treesitter.parsers".filetype_to_parsername
+ft_to_parser.astro = "tsx"

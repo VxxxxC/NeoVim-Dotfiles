@@ -9,17 +9,17 @@ vim.cmd [[packadd packer.nvim]]
 packer.startup(function(use)
   use 'wbthomason/packer.nvim'
   use {
-         'svrana/neosolarized.nvim',
-         requires = { 'tjdevries/colorbuddy.nvim' }
-     }
+    'svrana/neosolarized.nvim',
+    requires = { 'tjdevries/colorbuddy.nvim' }
+  }
   use 'EdenEast/nightfox.nvim' -- Theme nightfox
   use 'folke/tokyonight.nvim' -- Theme tokyonight
   use 'nvim-lualine/lualine.nvim' -- Status line
   use 'nvim-lua/plenary.nvim' -- Common utilities / flutter-tools dependancies
-  use 'kyazdani42/nvim-web-devicons' -- File icons 
+  use 'kyazdani42/nvim-web-devicons' -- File icons
 
-  use {'kyazdani42/nvim-tree.lua',
-        requires = 'kyazdani42/nvim-web-devicons'} -- File explorer
+  use { 'kyazdani42/nvim-tree.lua',
+    requires = 'kyazdani42/nvim-web-devicons' } -- File explorer
 
   use 'glepnir/lspsaga.nvim' --LSP UIs
 
@@ -33,7 +33,10 @@ packer.startup(function(use)
   use "rafamadriz/friendly-snippets" -- Friendly snippet
 
   use 'neovim/nvim-lspconfig' -- LSP
-  use 'jose-elias-alvarez/null-ls.nvim' -- Use Neovim as a language server to inject LSP diagnostics, code actions, and more via Lua
+
+  use { 'jose-elias-alvarez/null-ls.nvim', -- Use Neovim as a language server to inject LSP diagnostics, code actions, and more via Lua
+    requires = { "nvim-lua/plenary.nvim" }
+  }
   use 'MunifTanjim/prettier.nvim' -- Prettier plugin for Neovim's built-in LSP client
   use 'williamboman/mason.nvim'
   use 'williamboman/mason-lspconfig.nvim'
@@ -50,19 +53,23 @@ packer.startup(function(use)
   use 'nvim-telescope/telescope-file-browser.nvim'
 
 
-  use {'akinsho/nvim-bufferline.lua',
-        requires = 'kyazdani42/nvim-web-devicons'} -- File explorer
+  use { 'akinsho/nvim-bufferline.lua',
+    requires = 'kyazdani42/nvim-web-devicons' } -- File explorer
 
   use 'norcalli/nvim-colorizer.lua'
 
   use 'lewis6991/gitsigns.nvim'
 
   use({
-      "iamcco/markdown-preview.nvim",
+    "iamcco/markdown-preview.nvim",
     run = function() vim.fn["mkdp#util#install"]() end,
   })
 
   --below is Flutter/Dart LSP :
-  use {'akinsho/flutter-tools.nvim', requires = 'nvim-lua/plenary.nvim'}
+  use { 'akinsho/flutter-tools.nvim', requires = 'nvim-lua/plenary.nvim' }
   use 'mfussenegger/nvim-dap' -- plenary inject exteral Debugger , and nvim-dap-ui
+
+  --below is wakatime API for Github profile
+  use 'wakatime/vim-wakatime'
+
 end)
