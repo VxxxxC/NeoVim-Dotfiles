@@ -11,7 +11,7 @@ packer.startup(function(use)
   use {
     'svrana/neosolarized.nvim',
     requires = { 'tjdevries/colorbuddy.nvim' }
-  }
+  } -- Theme neosolarized_dark
   use 'EdenEast/nightfox.nvim' -- Theme nightfox
   use 'folke/tokyonight.nvim' -- Theme tokyonight
   use 'nvim-lualine/lualine.nvim' -- Status line
