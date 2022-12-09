@@ -99,6 +99,11 @@ _G.packer_plugins = {
     path = "/Users/veperho/.local/share/nvim/site/pack/packer/start/colorbuddy.nvim",
     url = "https://github.com/tjdevries/colorbuddy.nvim"
   },
+  ["flutter-tools.nvim"] = {
+    loaded = true,
+    path = "/Users/veperho/.local/share/nvim/site/pack/packer/start/flutter-tools.nvim",
+    url = "https://github.com/akinsho/flutter-tools.nvim"
+  },
   ["friendly-snippets"] = {
     loaded = true,
     path = "/Users/veperho/.local/share/nvim/site/pack/packer/start/friendly-snippets",
@@ -174,6 +179,16 @@ _G.packer_plugins = {
     path = "/Users/veperho/.local/share/nvim/site/pack/packer/start/nvim-colorizer.lua",
     url = "https://github.com/norcalli/nvim-colorizer.lua"
   },
+  ["nvim-dap"] = {
+    loaded = true,
+    path = "/Users/veperho/.local/share/nvim/site/pack/packer/start/nvim-dap",
+    url = "https://github.com/mfussenegger/nvim-dap"
+  },
+  ["nvim-lsp-installer"] = {
+    loaded = true,
+    path = "/Users/veperho/.local/share/nvim/site/pack/packer/start/nvim-lsp-installer",
+    url = "https://github.com/williamboman/nvim-lsp-installer"
+  },
   ["nvim-lspconfig"] = {
     loaded = true,
     path = "/Users/veperho/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
@@ -228,6 +243,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/veperho/.local/share/nvim/site/pack/packer/start/tokyonight.nvim",
     url = "https://github.com/folke/tokyonight.nvim"
+  },
+  ["vim-wakatime"] = {
+    loaded = true,
+    path = "/Users/veperho/.local/share/nvim/site/pack/packer/start/vim-wakatime",
+    url = "https://github.com/wakatime/vim-wakatime"
   }
 }
 

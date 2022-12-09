@@ -1,7 +1,22 @@
+local status, lsp_installer = pcall(require, 'nvim-lsp-installer')
+if (not status) then return end
+
+lsp_installer.setup({
+  automatic_installation = true, -- automatically detect which servers to install (based on which servers are set up via lspconfig)
+  ui = {
+    icons = {
+      server_installed = "✓",
+      server_pending = "➜",
+      server_uninstalled = "✗"
+    }
+  }
+})
+
+
 --vim.lsp.set_log_level("debug")
 
-local status, nvim_lsp = pcall(require, "lspconfig")
-if (not status) then return end
+local status1, nvim_lsp = pcall(require, "lspconfig")
+if (not status1) then return end
 
 local protocol = require('vim.lsp.protocol')
 
@@ -32,7 +47,7 @@ local on_attach = function(client, bufnr)
     vim.api.nvim_create_autocmd("BufWritePre", {
       group = vim.api.nvim_create_augroup("Format", { clear = true }),
       buffer = bufnr,
-      callback = function() vim.lsp.buf.formatting_seq_sync() end
+      callback = function() vim.lsp.buf.format() end
     })
   end
 end
@@ -68,11 +83,13 @@ protocol.CompletionItemKind = {
 -- Set up completion using nvim_cmp with LSP source
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
+-- ---------------------- Flow LSP ------------------------------------------
 nvim_lsp.flow.setup {
   on_attach = on_attach,
   capabilities = capabilities
 }
 
+-- ----------------------- TypeScript LSP ------------------------------------
 nvim_lsp.tsserver.setup {
   on_attach = on_attach,
   filetypes = { "javascript", "javascriptreact", "javascript.jsx", "typescript", "typescriptreact", "typescript.tsx" },
@@ -80,10 +97,12 @@ nvim_lsp.tsserver.setup {
   capabilities = capabilities
 }
 
+-- ----------------------------------------------------------------------
 nvim_lsp.sourcekit.setup {
   on_attach = on_attach,
 }
 
+-- ------------------------------- Lua LSP -----------------------------------
 nvim_lsp.sumneko_lua.setup {
   on_attach = on_attach,
   settings = {
@@ -115,12 +134,41 @@ nvim_lsp.cssls.setup {
   capabilities = capabilities
 }
 
+
+-- ------------------------- Dart LSP -----------------------------
+local dart_capabilities = protocol.make_client_capabilities()
+dart_capabilities.textDocument.codeAction = {
+  dynamicRegistration = false;
+  codeActionLiteralSupport = {
+    codeActionKind = {
+      valueSet = {
+        "",
+        "quickfix",
+        "refactor",
+        "refactor.extract",
+        "refactor.inline",
+        "refactor.rewrite",
+        "source",
+        "source.organizeImports",
+      };
+    };
+  };
+}
+
 nvim_lsp.dartls.setup {
-  on_attach = on_attach,
-  capabilities = capabilities,
+  on_attach = dart_attach,
+  capabilities = dart_capabilities,
   cmd = { "dart", "language-server", "--protocol=lsp" },
   filetypes = { "dart" },
+  init_options = {
+    onlyAnalyzeProjectsWithOpenFiles = true,
+    suggestFromUnimportedLibraries = false,
+    closingLabels = true,
+  };
 }
+
+
+-- ----------------------------- Astro LSP -------------------------------
 
 nvim_lsp.astro.setup {
   on_attach = on_attach,
@@ -129,6 +177,7 @@ nvim_lsp.astro.setup {
   filetypes = { "astro" },
 }
 
+-- ----------------------------- Yaml LSP --------------------------------
 nvim_lsp.yamlls.setup {
   on_attach = on_attach,
   capabilities = capabilities,

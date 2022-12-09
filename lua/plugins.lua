@@ -32,7 +32,8 @@ packer.startup(function(use)
   use 'saadparwaiz1/cmp_luasnip'
   use "rafamadriz/friendly-snippets" -- Friendly snippet
 
-  use 'neovim/nvim-lspconfig' -- LSP
+  use { 'neovim/nvim-lspconfig', -- LSP
+    'williamboman/nvim-lsp-installer' }
 
   use { 'jose-elias-alvarez/null-ls.nvim', -- Use Neovim as a language server to inject LSP diagnostics, code actions, and more via Lua
     requires = { "nvim-lua/plenary.nvim" }
@@ -64,10 +65,6 @@ packer.startup(function(use)
     "iamcco/markdown-preview.nvim",
     run = function() vim.fn["mkdp#util#install"]() end,
   })
-
-  --below is Flutter/Dart LSP :
-  use { 'akinsho/flutter-tools.nvim', requires = 'nvim-lua/plenary.nvim' }
-  use 'mfussenegger/nvim-dap' -- plenary inject exteral Debugger , and nvim-dap-ui
 
   --below is wakatime API for Github profile
   use 'wakatime/vim-wakatime'

@@ -32,5 +32,9 @@ null_ls.setup {
       filetypes = { "javascript", "javascriptreact", "typescript", "typescriptreact", "css", "scss", "less", "html",
         "json", "jsonc", "yaml", "markdown", "markdown.mdx" }
     }),
+
+    null_ls.builtins.formatting.dart_format.with({
+      filetypes = { "dart" },
+    })
   }
 }
