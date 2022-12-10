@@ -11,12 +11,12 @@ keymap.set('n', '<Tab><Space>', ':tabedit<Return>')
 -- Split window
 keymap.set('n', 'ss', ':split<Return><C-w>w')
 keymap.set('n', 'sv', ':vsplit<Return><C-w>w')
--- Move window 
-keymap.set('n','<Space>','<C-w>w')
-keymap.set('','sh','<C-w>h')
-keymap.set('','sk','<C-w>k')
-keymap.set('','sj','<C-w>j')
-keymap.set('','sl','<C-w>l')
+-- Move window
+keymap.set('n', '<Space>', '<C-w>w')
+keymap.set('', 'sh', '<C-w>h')
+keymap.set('', 'sk', '<C-w>k')
+keymap.set('', 'sj', '<C-w>j')
+keymap.set('', 'sl', '<C-w>l')
 
 -- Text edit
 keymap.set('n', '<C-d>', 'yyp')
@@ -31,9 +31,9 @@ keymap.set('n', '<C-t>', ':terminal<CR>i')
 keymap.set('t', '<Esc>', '<C-\\><C-n>')
 
 -- Explorer
-keymap.set('n', '\'e', ':NvimTreeToggle<CR>')
+keymap.set('n', ';nt', ':NvimTreeToggle<CR>')
 
--- Move to right 
+-- Move to right
 keymap.set('i', '<C-l>', '<Esc>la')
 -- Move to head or tail
 keymap.set('i', '<A-[>', '<Esc><S-I>')
@@ -43,5 +43,5 @@ keymap.set('i', '<A-]>', '<Esc><S-A>')
 keymap.set('n', ';fs', ':%s/')
 keymap.set('i', ';fs', '<Esc>:%s/')
 
--- Cancel hightlight after searching text , same keymap with ESC 
-keymap.set('n','<esc>', ':noh<Return>')
+-- Cancel hightlight after searching text , same keymap with ESC
+keymap.set('n', '<Esc>', ':noh<Return>')
