@@ -71,8 +71,7 @@ vim.keymap.set("n", "sf", function()
     respect_gitignore = false,
     hidden = true,
     grouped = true,
-    previewer = false,
+    all_previewer = true,
     initial_mode = "normal",
-    layout_config = { height = 40 }
   })
 end)

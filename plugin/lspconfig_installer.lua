@@ -156,9 +156,9 @@ dart_capabilities.textDocument.codeAction = {
 }
 
 nvim_lsp.dartls.setup {
-  on_attach = dart_attach,
-  capabilities = dart_capabilities,
-  cmd = { "dart", "language-server", "--protocol=lsp" },
+  on_attach = on_attach,
+  capabilities = capabilities,
+  cmd = { "dart", "/usr/local/opt/dart/libexec/bin/snapshots/analysis_server.dart.snapshot", "--protocol=lsp" },
   filetypes = { "dart" },
   init_options = {
     onlyAnalyzeProjectsWithOpenFiles = true,
