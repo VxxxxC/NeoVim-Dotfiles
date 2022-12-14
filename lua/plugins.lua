@@ -32,8 +32,7 @@ packer.startup(function(use)
   use 'saadparwaiz1/cmp_luasnip'
   use "rafamadriz/friendly-snippets" -- Friendly snippet
 
-  use { 'neovim/nvim-lspconfig', -- LSP
-    'williamboman/nvim-lsp-installer' }
+  use 'neovim/nvim-lspconfig' -- LSP
 
   use { 'jose-elias-alvarez/null-ls.nvim', -- Use Neovim as a language server to inject LSP diagnostics, code actions, and more via Lua
     requires = { "nvim-lua/plenary.nvim" }
