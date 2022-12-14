@@ -1,22 +1,5 @@
-local status, lsp_installer = pcall(require, 'nvim-lsp-installer')
-if (not status) then return end
-
-lsp_installer.setup({
-  automatic_installation = true, -- automatically detect which servers to install (based on which servers are set up via lspconfig)
-  ui = {
-    icons = {
-      server_installed = "✓",
-      server_pending = "➜",
-      server_uninstalled = "✗"
-    }
-  }
-})
-
-
---vim.lsp.set_log_level("debug")
-
-local status1, nvim_lsp = pcall(require, "lspconfig")
-if (not status1) then return end
+local status_lspconfig, nvim_lsp = pcall(require, "lspconfig")
+if (not status_lspconfig) then return end
 
 local protocol = require('vim.lsp.protocol')
 
@@ -157,7 +140,7 @@ dart_capabilities.textDocument.codeAction = {
 
 nvim_lsp.dartls.setup {
   on_attach = on_attach,
-  capabilities = capabilities,
+  capabilities = dart_capabilities,
   cmd = { "dart", "/usr/local/opt/dart/libexec/bin/snapshots/analysis_server.dart.snapshot", "--protocol=lsp" },
   filetypes = { "dart" },
   init_options = {
@@ -184,6 +167,7 @@ nvim_lsp.yamlls.setup {
   cmd = { "yaml-language-server", "--stdio" },
   filetypes = { "yaml", "yaml.docker-compose" },
 }
+-- ------------------------------------------------------------------------
 
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
   vim.lsp.diagnostic.on_publish_diagnostics, {
