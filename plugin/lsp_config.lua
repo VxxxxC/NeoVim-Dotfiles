@@ -119,34 +119,18 @@ nvim_lsp.cssls.setup {
 
 
 -- ------------------------- Dart LSP -----------------------------
-local dart_capabilities = protocol.make_client_capabilities()
-dart_capabilities.textDocument.codeAction = {
-  dynamicRegistration = false;
-  codeActionLiteralSupport = {
-    codeActionKind = {
-      valueSet = {
-        "",
-        "quickfix",
-        "refactor",
-        "refactor.extract",
-        "refactor.inline",
-        "refactor.rewrite",
-        "source",
-        "source.organizeImports",
-      };
-    };
-  };
-}
-
 nvim_lsp.dartls.setup {
   on_attach = on_attach,
-  capabilities = dart_capabilities,
-  cmd = { "dart", "/usr/local/opt/dart/libexec/bin/snapshots/analysis_server.dart.snapshot", "--protocol=lsp" },
+  capabilities = capabilities,
+  cmd = { "dart", "/usr/local/opt/dart/libexec/bin/snapshots/analysis_server.dart.snapshot", "--lsp" },
+  root_dir = nvim_lsp.util.root_pattern("pubspec.yaml"),
   filetypes = { "dart" },
   init_options = {
-    onlyAnalyzeProjectsWithOpenFiles = true,
-    suggestFromUnimportedLibraries = false,
+    onlyAnalyzeProjectsWithOpenFiles = false,
+    suggestFromUnimportedLibraries = true,
     closingLabels = true,
+    outline = true,
+    fluttreOutline = false,
   };
 }
 
