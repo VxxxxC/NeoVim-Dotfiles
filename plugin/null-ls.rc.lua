@@ -27,14 +27,20 @@ null_ls.setup {
       filetypes = { "javascript", "javascriptreact", "typescript", "typescriptreact" }
     }),
 
-    --prettierd (need npm install -g prettierd)
-    null_ls.builtins.formatting.prettierd.with({
+    null_ls.builtins.formatting.prettier.with({
       filetypes = { "javascript", "javascriptreact", "typescript", "typescriptreact", "css", "scss", "less", "html",
         "json", "jsonc", "yaml", "markdown", "markdown.mdx" }
     }),
 
     null_ls.builtins.formatting.dart_format.with({
       filetypes = { "dart" },
-    })
+    }),
+
+    null_ls.builtins.diagnostics.jsonlint.with({
+      filetpyes = { "json" },
+    }),
+    null_ls.builtins.formatting.fixjson.with({
+      filetypes = { "json" },
+    }),
   }
 }

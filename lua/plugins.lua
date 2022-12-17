@@ -13,7 +13,6 @@ packer.startup(function(use)
     requires = { 'tjdevries/colorbuddy.nvim' }
   } -- Theme neosolarized_dark
   use 'EdenEast/nightfox.nvim' -- Theme nightfox
-  use 'folke/tokyonight.nvim' -- Theme tokyonight
   use 'nvim-lualine/lualine.nvim' -- Status line
   use 'nvim-lua/plenary.nvim' -- Common utilities / flutter-tools dependancies
   use 'kyazdani42/nvim-web-devicons' -- File icons
@@ -34,12 +33,12 @@ packer.startup(function(use)
 
   use 'neovim/nvim-lspconfig' -- LSP
 
-  use { 'jose-elias-alvarez/null-ls.nvim', -- Use Neovim as a language server to inject LSP diagnostics, code actions, and more via Lua
-    requires = { "nvim-lua/plenary.nvim" }
+  use { 'williamboman/mason.nvim',
+    'williamboman/mason-lspconfig.nvim',
+    { 'jose-elias-alvarez/null-ls.nvim', requires = { 'nvim-lua/plenary.nvim' } }
   }
+
   use 'MunifTanjim/prettier.nvim' -- Prettier plugin for Neovim's built-in LSP client
-  use 'williamboman/mason.nvim'
-  use 'williamboman/mason-lspconfig.nvim'
 
   use {
     'nvim-treesitter/nvim-treesitter',
