@@ -8,7 +8,7 @@ null_ls.setup {
     null_ls.builtins.diagnostics.fish,
 
     --eslint_d (need npm install -g eslint_g)
-    null_ls.builtins.diagnostics.eslint_d.with({
+    --[[null_ls.builtins.diagnostics.eslint_d.with({
       diagnostic_config = {
         -- see :help vim.diagnostic.config()
         underline = true,
@@ -18,7 +18,7 @@ null_ls.setup {
         severity_sort = true,
       },
       diagnostics_format = '[null-ls eslint_d] #{m}\n(#{c})'
-    }),
+    }),]] --
 
     null_ls.builtins.code_actions.eslint_d.with({
       filetypes = { "javascript", "javascriptreact", "typescript", "typescriptreact" }
