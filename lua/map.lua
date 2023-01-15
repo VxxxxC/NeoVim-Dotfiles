@@ -45,3 +45,6 @@ keymap.set('i', ';fs', '<Esc>:%s/')
 
 -- Cancel hightlight after searching text , same keymap with ESC
 keymap.set('n', '<Esc>', ':noh<Return>')
+
+-- Copy from VIM to external clipboard
+keymap.set('v', '<C-c>', ':w !pbcopy <Return> <Return>')
