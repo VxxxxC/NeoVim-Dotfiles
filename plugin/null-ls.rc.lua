@@ -9,6 +9,7 @@ null_ls.setup {
 
     --eslint_d (need npm install -g eslint_g)
     --[[null_ls.builtins.diagnostics.eslint_d.with({
+      filetypes = { "javascript", "javascriptreact", "typescript", "typescriptreact", "vue" },
       diagnostic_config = {
         -- see :help vim.diagnostic.config()
         underline = true,
@@ -21,14 +22,15 @@ null_ls.setup {
     }),]] --
 
     null_ls.builtins.code_actions.eslint_d.with({
-      filetypes = { "javascript", "javascriptreact", "typescript", "typescriptreact" }
+      filetypes = { "javascript", "javascriptreact", "typescript", "typescriptreact", "vue" }
     }),
     null_ls.builtins.formatting.eslint_d.with({
-      filetypes = { "javascript", "javascriptreact", "typescript", "typescriptreact" }
+      filetypes = { "javascript", "javascriptreact", "typescript", "typescriptreact", "vue" }
     }),
 
     null_ls.builtins.formatting.prettier.with({
-      filetypes = { "javascript", "javascriptreact", "typescript", "typescriptreact", "css", "scss", "less", "html",
+      filetypes = { "javascript", "javascriptreact", "typescript", "typescriptreact", "vue", "css", "scss", "less",
+        "html",
         "json", "jsonc", "yaml", "markdown", "markdown.mdx" }
     }),
 

@@ -75,11 +75,26 @@ nvim_lsp.flow.setup {
 -- ----------------------- TypeScript LSP ------------------------------------
 nvim_lsp.tsserver.setup {
   on_attach = on_attach,
-  filetypes = { "javascript", "javascriptreact", "javascript.jsx", "typescript", "typescriptreact", "typescript.tsx" },
-  cmd = { "typescript-language-server", "--stdio" },
-  capabilities = capabilities
+  capabilities = capabilities,
 }
 
+-- ------------------------ Angular LSP --------------------------------------
+nvim_lsp.angularls.setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
+}
+
+-- ----------------------- Vue LSP -------------------------------------------
+nvim_lsp.vuels.setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
+}
+
+-- ---------------------- Svelte LSP ----------------------------------------
+nvim_lsp.svelte.setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
+}
 -- ----------------------------------------------------------------------
 nvim_lsp.sourcekit.setup {
   on_attach = on_attach,
@@ -123,15 +138,6 @@ nvim_lsp.dartls.setup {
   on_attach = on_attach,
   capabilities = capabilities,
   cmd = { "dart", "/usr/local/opt/dart/libexec/bin/snapshots/analysis_server.dart.snapshot", "--lsp" },
-  root_dir = nvim_lsp.util.root_pattern("pubspec.yaml"),
-  filetypes = { "dart" },
-  init_options = {
-    onlyAnalyzeProjectsWithOpenFiles = false,
-    suggestFromUnimportedLibraries = true,
-    closingLabels = true,
-    outline = true,
-    fluttreOutline = false,
-  };
 }
 
 
