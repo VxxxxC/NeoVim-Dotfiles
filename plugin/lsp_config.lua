@@ -85,7 +85,7 @@ nvim_lsp.angularls.setup {
 }
 
 -- ----------------------- Vue LSP -------------------------------------------
-nvim_lsp.vuels.setup {
+nvim_lsp.volar.setup {
   on_attach = on_attach,
   capabilities = capabilities,
 }
