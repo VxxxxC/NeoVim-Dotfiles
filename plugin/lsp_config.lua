@@ -85,10 +85,10 @@ nvim_lsp.angularls.setup {
 }
 
 -- ----------------------- Vue LSP -------------------------------------------
-nvim_lsp.volar.setup {
+ nvim_lsp.vuels.setup {
   on_attach = on_attach,
   capabilities = capabilities,
-}
+} 
 
 -- ---------------------- Svelte LSP ----------------------------------------
 nvim_lsp.svelte.setup {

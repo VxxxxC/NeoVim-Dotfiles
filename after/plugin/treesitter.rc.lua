@@ -24,7 +24,8 @@ ts.setup {
     "python",
     "sql",
     "dart",
-    "astro"
+    "astro",
+    "vue",
   },
   autotag = {
     enable = true,
