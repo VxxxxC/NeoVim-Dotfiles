@@ -21,6 +21,11 @@ packer.startup(function(use)
     requires = 'kyazdani42/nvim-web-devicons' } -- File explorer
 
   use 'glepnir/lspsaga.nvim' --LSP UIs
+  
+  use {
+  "folke/todo-comments.nvim",
+  requires = "nvim-lua/plenary.nvim",
+}
 
 
   use 'onsails/lspkind-nvim' --vscode-like pictograms

@@ -1,5 +1,5 @@
 -- ------------------------ Normal Theme with "auto" -------------------------------------------------
---[[
+
 
 local status, lualine = pcall(require, 'lualine')
 if (not status) then return end
@@ -7,7 +7,7 @@ if (not status) then return end
 lualine.setup {
   options = {
     icons_enabled = true,
-    theme = 'auto',
+    theme = 'powerline_dark',
     section_separators = { left = '', right = '' },
     component_separators = { left = '', right = '' },
     disabled_filetypes = {}
@@ -45,9 +45,8 @@ lualine.setup {
   extensions = { 'fugitive' }
 }
 
---]]
 
-
+--[[
 -- ------------------------------------------ Evil Theme ---------------------------------------------------------
 ---- Eviline config for lualine
 -- Author: shadmansaleh
@@ -270,3 +269,4 @@ ins_right {
 
 -- Now don't forget to initialize lualine
 lualine.setup(config)
+]]--
