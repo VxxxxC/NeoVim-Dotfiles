@@ -14,7 +14,7 @@ packer.startup(function(use)
   } -- Theme neosolarized_dark
   use 'EdenEast/nightfox.nvim' -- Theme nightfox
   use 'nvim-lualine/lualine.nvim' -- Status line
-  use 'nvim-lua/plenary.nvim' -- Common utilities / flutter-tools dependancies
+  use 'nvim-lua/plenary.nvim' -- Common utilities
   use 'kyazdani42/nvim-web-devicons' -- File icons
 
   use { 'kyazdani42/nvim-tree.lua',
@@ -71,5 +71,11 @@ packer.startup(function(use)
 
   --below is wakatime API for Github profile
   use 'wakatime/vim-wakatime'
+
+  --Flutter plugin
+  use 'dart-lang/dart-vim-plugin'
+  use 'thosakwe/vim-flutter'
+  use 'natebosch/vim-lsc'
+  use 'natebosch/vim-lsc-dart'
 
 end)

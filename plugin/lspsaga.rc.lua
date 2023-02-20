@@ -1,7 +1,7 @@
 local status, saga = pcall(require, "lspsaga")
 if (not status) then return end
 
-saga.setup{
+saga.setup {
   server_filetype_map = {
     typescript = 'typescript'
   }
@@ -10,8 +10,8 @@ saga.setup{
 local opts = { noremap = true, silent = true }
 local keymap = vim.keymap
 
-keymap.set('n', '[d', '<Cmd>Lspsaga diagnostic_jump_prev<CR>', opts) -- Jump and show up the error
-keymap.set('n', ']d', '<Cmd>Lspsaga diagnostic_jump_next<CR>', opts) -- Jump and show up the error
+keymap.set('n', '[d', '<Cmd>Lspsaga diagnostic_jump_prev<CR>', opts) -- Jump to next warning/error
+keymap.set('n', ']d', '<Cmd>Lspsaga diagnostic_jump_next<CR>', opts) -- Jump to prev warning/error
 -- Show line diagnostics
 keymap.set("n", "<C-d>", "<cmd>Lspsaga show_line_diagnostics<CR>", opts)
 

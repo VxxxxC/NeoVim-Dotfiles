@@ -4,6 +4,7 @@ if (not status) then return end
 prettier.setup {
   bin = 'prettier',
   filetypes = {
+    'html',
     'css',
     'javascript',
     'javascriptreact',
@@ -14,5 +15,7 @@ prettier.setup {
     'less',
     'dart',
     'yaml',
+    'graphql',
+    'markdown',
   }
 }
