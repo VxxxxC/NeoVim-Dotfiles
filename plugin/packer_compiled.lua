@@ -99,6 +99,11 @@ _G.packer_plugins = {
     path = "/Users/veperho/.local/share/nvim/site/pack/packer/start/colorbuddy.nvim",
     url = "https://github.com/tjdevries/colorbuddy.nvim"
   },
+  ["dart-vim-plugin"] = {
+    loaded = true,
+    path = "/Users/veperho/.local/share/nvim/site/pack/packer/start/dart-vim-plugin",
+    url = "https://github.com/dart-lang/dart-vim-plugin"
+  },
   ["friendly-snippets"] = {
     loaded = true,
     path = "/Users/veperho/.local/share/nvim/site/pack/packer/start/friendly-snippets",
@@ -228,6 +233,21 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/veperho/.local/share/nvim/site/pack/packer/start/todo-comments.nvim",
     url = "https://github.com/folke/todo-comments.nvim"
+  },
+  ["vim-flutter"] = {
+    loaded = true,
+    path = "/Users/veperho/.local/share/nvim/site/pack/packer/start/vim-flutter",
+    url = "https://github.com/thosakwe/vim-flutter"
+  },
+  ["vim-lsc"] = {
+    loaded = true,
+    path = "/Users/veperho/.local/share/nvim/site/pack/packer/start/vim-lsc",
+    url = "https://github.com/natebosch/vim-lsc"
+  },
+  ["vim-lsc-dart"] = {
+    loaded = true,
+    path = "/Users/veperho/.local/share/nvim/site/pack/packer/start/vim-lsc-dart",
+    url = "https://github.com/natebosch/vim-lsc-dart"
   },
   ["vim-wakatime"] = {
     loaded = true,
