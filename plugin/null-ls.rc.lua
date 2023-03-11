@@ -38,9 +38,6 @@ null_ls.setup {
       filetypes = { "dart" },
     }),
 
-    null_ls.builtins.diagnostics.jsonlint.with({
-      filetpyes = { "json" },
-    }),
     null_ls.builtins.formatting.fixjson.with({
       filetypes = { "json" },
     }),
