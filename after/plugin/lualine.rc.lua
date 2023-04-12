@@ -18,30 +18,49 @@ lualine.setup {
     lualine_c = { {
       'filename',
       file_status = true, -- displays file status (readonly status, modified status)
-      path = 0 -- 0 = just filename, 1 = relative path, 2 = absolute path
-    } },
+      path = 0            -- 0 = just filename, 1 = relative path, 2 = absolute path
+    },
+      'lsp_progress'
+    },
     lualine_x = {
-      { 'diagnostics', sources = { "nvim_diagnostic" }, symbols = { error = ' ', warn = ' ', info = ' ',
-        hint = ' ' } },
+      {
+        'diagnostics',
+        sources = { "nvim_diagnostic" },
+        symbols = {
+          error = ' ',
+          warn = ' ',
+          info = ' ',
+          hint = ' '
+        }
+      },
       'encoding',
-      'filetype'
+      'filetype',
+      'tabnine'
     },
     lualine_y = { 'progress' },
     lualine_z = { 'location' }
   },
+
   inactive_sections = {
     lualine_a = {},
     lualine_b = {},
     lualine_c = { {
       'filename',
       file_status = true, -- displays file status (readonly status, modified status)
-      path = 1 -- 0 = just filename, 1 = relative path, 2 = absolute path
+      path = 1            -- 0 = just filename, 1 = relative path, 2 = absolute path
     } },
     lualine_x = { 'location' },
     lualine_y = {},
     lualine_z = {}
   },
-  tabline = {},
+  tabline = {
+    lualine_a = {},
+    lualine_b = { 'branch' },
+    lualine_c = { 'filename' },
+    lualine_x = {},
+    lualine_y = {},
+    lualine_z = {},
+  },
   extensions = { 'fugitive' }
 }
 
@@ -269,4 +288,5 @@ ins_right {
 
 -- Now don't forget to initialize lualine
 lualine.setup(config)
-]]--
+]]
+--
