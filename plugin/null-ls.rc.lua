@@ -7,8 +7,8 @@ null_ls.setup {
     -- fish
     null_ls.builtins.diagnostics.fish,
 
-    --eslint_d (need npm install -g eslint_g)
-    --[[null_ls.builtins.diagnostics.eslint_d.with({
+    --eslint_d  **npm install -g eslint_g / :MasonInstall eslint_d
+    null_ls.builtins.diagnostics.eslint_d.with({
       filetypes = { "javascript", "javascriptreact", "typescript", "typescriptreact", "vue" },
       diagnostic_config = {
         -- see :help vim.diagnostic.config()
@@ -19,7 +19,7 @@ null_ls.setup {
         severity_sort = true,
       },
       diagnostics_format = '[null-ls eslint_d] #{m}\n(#{c})'
-    }),]] --
+    }),
 
     null_ls.builtins.code_actions.eslint_d.with({
       filetypes = { "javascript", "javascriptreact", "typescript", "typescriptreact", "vue" }
