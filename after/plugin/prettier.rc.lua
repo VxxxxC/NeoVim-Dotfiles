@@ -10,6 +10,7 @@ prettier.setup {
     'javascriptreact',
     'typescript',
     'typescriptreact',
+    'vue',
     'json',
     'scss',
     'less',
