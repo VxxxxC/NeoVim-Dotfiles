@@ -28,11 +28,12 @@ cmp.setup({
       behavior = cmp.ConfirmBehavior.Replace,
       select = true
     }),
- }),
+  }),
   sources = cmp.config.sources({
     { name = "luasnip" },
     { name = 'nvim_lsp' },
     { name = 'buffer' },
+    { name = 'cmp_tabnine' },
   }),
   formatting = {
     format = lspkind.cmp_format({ with_text = true, maxwidth = 100 })

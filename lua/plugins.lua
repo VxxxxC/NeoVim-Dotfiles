@@ -9,7 +9,7 @@ vim.cmd [[packadd packer.nvim]]
 packer.startup(function(use)
   use 'wbthomason/packer.nvim'
   use {
-    'codota/tabnine-nvim', run = "./dl_binaries.sh"
+      'tzachar/cmp-tabnine', run = './install.sh', requires = 'hrsh7th/nvim-cmp'
   }
   use {
     'svrana/neosolarized.nvim',
