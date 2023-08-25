@@ -9,7 +9,7 @@ vim.cmd [[packadd packer.nvim]]
 packer.startup(function(use)
   use 'wbthomason/packer.nvim'
   use {
-      'tzachar/cmp-tabnine', run = './install.sh', requires = 'hrsh7th/nvim-cmp'
+    'tzachar/cmp-tabnine', run = './install.sh', requires = 'hrsh7th/nvim-cmp'
   }
   use {
     'svrana/neosolarized.nvim',
@@ -23,7 +23,14 @@ packer.startup(function(use)
   use { 'kyazdani42/nvim-tree.lua',
     requires = 'kyazdani42/nvim-web-devicons' } -- File explorer
 
-  use 'glepnir/lspsaga.nvim'                    --LSP UIs
+  -- use 'glepnir/lspsaga.nvim'                    --LSP UIs
+  use({
+    'nvimdev/lspsaga.nvim', --LSP UIs
+    after = 'nvim-lspconfig',
+    config = function()
+      require('lspsaga').setup({})
+    end,
+  })
 
   use {
     "folke/todo-comments.nvim",

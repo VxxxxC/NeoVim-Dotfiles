@@ -19,7 +19,7 @@ keymap.set("n", "<C-d>", "<cmd>Lspsaga show_line_diagnostics<CR>", opts)
 keymap.set("n", "<C-d>", "<cmd>Lspsaga show_cursor_diagnostics<CR>", opts)
 
 keymap.set('n', 'K', '<Cmd>Lspsaga hover_doc<CR>', opts)
-keymap.set('n', 'gd', '<Cmd>Lspsaga lsp_finder<CR>', opts) -- Find definition. Press `o` to select file or where to jump
+keymap.set('n', 'gd', '<Cmd>Lspsaga finder<CR>', opts) -- Find definition. Press `o` to select file or where to jump
 keymap.set('i', '<C-k>', '<Cmd>Lspsaga signature_help<CR>', opts)
 keymap.set('n', 'gp', '<Cmd>Lspsaga peek_definition<CR>', opts)
 keymap.set('n', 'gr', '<Cmd>Lspsaga rename<CR>', opts) -- Rename variable, function, class, ...
