@@ -23,13 +23,12 @@ packer.startup(function(use)
   use { 'kyazdani42/nvim-tree.lua',
     requires = 'kyazdani42/nvim-web-devicons' } -- File explorer
 
-  -- use 'glepnir/lspsaga.nvim'                    --LSP UIs
   use({
-    'nvimdev/lspsaga.nvim', --LSP UIs
-    after = 'nvim-lspconfig',
-    config = function()
-      require('lspsaga').setup({})
-    end,
+    'ray-x/navigator.lua',
+    requires = {
+      { 'ray-x/guihua.lua',     run = 'cd lua/fzy && make' },
+      { 'neovim/nvim-lspconfig' },
+    },
   })
 
   use {

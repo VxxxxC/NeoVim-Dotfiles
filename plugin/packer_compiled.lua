@@ -114,6 +114,11 @@ _G.packer_plugins = {
     path = "/Users/veperho/.local/share/nvim/site/pack/packer/start/friendly-snippets",
     url = "https://github.com/rafamadriz/friendly-snippets"
   },
+  ["guihua.lua"] = {
+    loaded = true,
+    path = "/Users/veperho/.local/share/nvim/site/pack/packer/start/guihua.lua",
+    url = "https://github.com/ray-x/guihua.lua"
+  },
   ["lspkind-nvim"] = {
     loaded = true,
     path = "/Users/veperho/.local/share/nvim/site/pack/packer/start/lspkind-nvim",
@@ -138,6 +143,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/veperho/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
+  },
+  ["navigator.lua"] = {
+    loaded = true,
+    path = "/Users/veperho/.local/share/nvim/site/pack/packer/start/navigator.lua",
+    url = "https://github.com/ray-x/navigator.lua"
   },
   ["neosolarized.nvim"] = {
     loaded = true,
