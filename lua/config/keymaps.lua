@@ -178,12 +178,8 @@ map("n", "<leader>ci", "<cmd>ClangdToggleInlayHints<CR>", { desc = "Calngd Toggl
 -- Telescope
 local builtin = require("telescope.builtin")
 
-map("n", ";f", function()
-  builtin.find_files({ no_ignore = false, hidden = true })
-end, { silent = true, desc = "Telescope Find Files" })
-map("n", ";r", function()
-  builtin.live_grep()
-end, { silent = true, desc = "Telescope Live Grep" })
+map("n", ";f", ":Telescope find_files <CR>", { silent = true, desc = "Telescope Find Files" })
+map("n", ";r", ":Telescope live_grep <CR>", { silent = true, desc = "Telescope Live Grep" })
 map("n", ";b", function()
   builtin.buffers()
 end, { silent = true, desc = "Telescope Buffers" })
