@@ -9,7 +9,7 @@ return {
 
   { "lukas-reineke/indent-blankline.nvim", enabled = false },
   {
-    "windwp/nvim-spectre",
+    "nvim-pack/nvim-spectre",
     enabled = false,
   },
   { "hrsh7th/cmp-nvim-lsp-signature-help", enabled = false },
